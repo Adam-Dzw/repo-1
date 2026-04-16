@@ -56,13 +56,31 @@ void generujImie(Osoba tab[], int index)
 
 
 
-void generujReszte(Osoba tab[], int index, mt19937& gen)
+void generujReszte(Osoba tab[], int index, mt19937 &gen)  
 
+{ 
 
+    uniform_int_distribution<> d7(0, 6); 
 
-{
+    uniform_int_distribution<> dWiek(18, 80); 
 
-}
+    uniform_int_distribution<> dWzrost(150, 210); 
+
+     string nBazowe = bazaNazwisk[d7(gen)]; 
+
+    char literaN = bazaNazwisk[d7(gen)][0]; 
+
+    nBazowe[0] = literaN; 
+
+    tab[index].nazwisko = nBazowe; 
+
+    tab[index].wiek = dWiek(gen); 
+
+    tab[index].wzrost = dWzrost(gen); 
+
+    tab[index].id = index + 1; 
+
+} 
 
 
 
