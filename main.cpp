@@ -64,6 +64,15 @@ int znajdzMaxWzrost(Osoba tab[], int rozmiar)
 int znajdzNajmlodszego(Osoba tab[], int rozmiar)
 {
 
+	int minWiek = tab[0].wiek; 
+    int indeks = 0; 
+    for(int i = 1; i < rozmiar; i++) { 
+        if(tab[i].wiek < minWiek) { 
+            minWiek = tab[i].wiek; 
+            indeks = i; 
+        } 
+    } 
+    return indeks; 
 }
 
 
