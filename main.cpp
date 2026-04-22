@@ -58,7 +58,15 @@ double obliczSredniWiek(Osoba tab[], int rozmiar)
 
 int znajdzMaxWzrost(Osoba tab[], int rozmiar)
 {
+int znajdzMaxWzrost(Osoba tab[], int rozmiar) { 
+    int maxW = tab[0].wzrost; 
+	
+    for(int i = 1; i < rozmiar; i++) { 
+        if(tab[i].wzrost > maxW) maxW = tab[i].wzrost; 
 
+    } 
+
+    return maxW; 
 }
 
 int znajdzNajmlodszego(Osoba tab[], int rozmiar)
